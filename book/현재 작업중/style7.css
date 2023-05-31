@@ -1,0 +1,81 @@
+/* 이곳은 가변반응형 페이지를 만들기위한것이며 너비,높이같은건
+%, em, rem 을 사용해야만한다.  */
+
+
+*{ box-sizing: border-box;}  /* padding과 같은 속성값을 넣으면 테두리를 벗어나는걸 
+ 방지하는역활을한다. *(별표시)는 모든영역을 지칭한다.   */
+
+body{
+    background-color: red;
+}
+
+/* container 가 하위 블럭들을 감싸고있다. 그러므로 부모가되고 아래의
+블럭요소들은 자식이라고보면된다. */ 
+.container{
+    width: 100%;  /* 최상위는 body인데, body전체에서 90%를 사용한다는말이다. */
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.header{
+    width: 100%;  /* 부모인 container가 사용하는 너비를 전부다 사용하겠다는말이다.  */
+    height: 6.25rem;  /* 높이지정 */
+    background-color: tomato;  /* 웹페이지 작성을 편하게하기위해서 임시로 색구분을 하였음  */
+}
+
+
+
+.main{
+    float: left; /* 한 라인에서 블록요소를 나누기위해서 사용함(왼쪽할당)  */
+    width: 98%;  /* 부모인 container가 사용하는 너비중에서 67%를 사용하겠다는말이다.  */
+    height: 80vh;  /* 높이지정 */
+    padding: 0%;  /* 부모 container기준대비 10%이다. */
+    background-color: orange;  /* 웹페이지 작성을 편하게하기위해서 임시로 색구분을 하였음  */
+}
+
+
+.hero{
+    margin-top: -10rem;
+    height: 60vh;  /* 높이지정 */
+}
+
+
+
+/* 동영상화면속에 삽입할 글자 */
+body > div.main > div > div{
+    margin-top: 30%;  /* 글자 아래로 내리기 */
+    text-align: center;
+    font-weight: 500;  /* 글자 굵기를 정하는 수치 */
+    line-height: 1.2em;
+    font-size: 0.8m;
+    position: absolute;   /* left: 50%; transform: translateX(-50%); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+
+
+
+
+.aside{
+    float: right; /* 한 라인에서 블록요소를 나누기위해서 사용함(오른쪽할당)  */
+    width: 2%;
+    height: 80vh;  /* 높이지정 */
+    padding: 0%;
+    background-color: purple;  /* 웹페이지 작성을 편하게하기위해서 임시로 색구분을 하였음  */
+}
+
+
+.footer{
+    clear: both;  /* 위에 설정되었든 속성값을 다시 초기화시킨다.  */
+    width: 100%;
+    height: 6.25rem;
+    background-color: violet;  /* 웹페이지 작성을 편하게하기위해서 임시로 색구분을 하였음  */
+
+}
+

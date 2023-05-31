@@ -1,0 +1,246 @@
+<!-- 부트스트랩 5.2.2로 제작되었다. css나 js 를 버전에 다른걸 설치하면 작동이 제대로 안될수있으니 주의바람!
+부트스트랩 link는 <head>에 삽입하고 script는 body부분의 끝부분에 삽입한다.
+-->
+
+
+<!doctype html>
+<html lang="ko"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"
+        <meta name="description" content="직지35회">
+        <title>☏직지35</title>
+        <!-- 자바스크립트(중요!) -->
+        <link rel="stylesheet media="screen and (max-width: 768px)" href="main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+	
+		<!-- 구글 머터리얼 아이콘을 사용할수있다.(공통으로 전부 적용됨!)  -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		
+
+        <!-- 마우스 우클릭 방지/드래그 방지하는 스크립트를 head안에 삽입! -->
+        <script type="text/javascript">
+          document.oncontextmenu = function () {
+            return false;
+          };
+        </script>
+
+    </head>
+
+
+
+
+    <!-- 마우스 우클릭방지/드래그방지하는 스크립트를 body에 같이 삽입한다.  -->
+    <body
+      oncontextmenu="return false"
+      onselectstart="return false"
+      ondragstart="return false"
+      onkeydown="return false"
+    >
+
+
+
+		<!-- <헤드부분 네비바   -->
+		<nav class="navbar navbar-dark bg-dark fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="../index.html">Terraone</a>
+				
+				
+				<!--  구글 머터리얼 아이콘  -->
+				<div class="material-symbols text-light">  <!-- 글자 하얀색(머터리얼아이콘은 글자로인식)   -->
+					<a href="#" class="material-symbols-outlined">home</a>
+					<a href="#" class="material-symbols-outlined">send</a>
+					<a href="#" class="material-symbols-outlined">Navigation</a>
+				</div>
+
+				
+				<!-- <햄버거 버튼  -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<!-- <햄버거 버튼을 클릭하면 우측에서 열리는 메뉴창  -->
+				<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+					<div class="offcanvas-header">
+						
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					
+					<!-- <햄버거 버튼을 클릭으로 열린 페이지  -->
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+							<li class="nav-item">
+							<!--  Home버튼 ==> 클릭하면 메인페이지로 이동한다. -->
+							<a class="btn btn-primary" href="../index.html" role="button">Home</a>
+							<br>
+							
+						
+					<!-- 스피너 원형으로 회전시키기! ==> 직지35황악회 문자도 같이 회전한다.  -->
+					<br><br><br><br>
+					<div class="d-flex justify-content-center">
+						<div class="spinner-border spinner-border-sm text-success" role="status">
+							<span class="visually-hidden">Loading...</span>
+							<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">직지35회 황악회</h5>
+						</div>
+					</div>
+						
+						
+						
+						
+					<!--  황악회칙보기 Box -->		
+					<div class="d-flex gap-5 justify-content-center">
+
+					  <ul class="dropdown-menu dropdown-menu-dark position-static d-grid gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
+						<li><a class="dropdown-item rounded-2 active">황악회칙보기</a></li>
+						<li><a class="dropdown-item rounded-2" href="../book/index1.html">1페이지</a></li>
+						<li><a class="dropdown-item rounded-2" href="../book/index2.html">2페이지</a></li>
+						<li><a class="dropdown-item rounded-2" href="../book/index3.html">3페이지</a></li>
+						<li><a class="dropdown-item rounded-2" href="../book/index4.html">4페이지</a></li>
+						<li><a class="dropdown-item rounded-2" href="../book/index5.html">5페이지</a></li>
+						<li><a class="dropdown-item rounded-2" href="../book/index6.html">6페이지</a></li>
+					  </ul>
+					</div>
+						
+						
+
+						
+						
+						
+						
+						<!-- <Dropdown 클릭시 아래로 펼쳐지는 메뉴판  -->
+						<ul class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Dropdown
+							</a>
+							<br>
+					  
+							<ul class="dropdown-menu dropdown-menu-dark">
+								<li><a class="dropdown-item" href="http://pf.kakao.com/_bnUks/chat">카카오톡</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="intro/Forest-2.mp4" autoplay muted loop>Movie</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="https://github.com/jeon2457/jikji35/tree/main/music/download">Music</a></li>
+							</ul>
+						</ul>
+					
+				</div>
+			</div>
+	   
+		</nav> 
+
+
+		<p>
+		<br>
+		<br>
+		
+		<!-- 콜랩스(collapse) 아래로 펼쳐지는 토글 메뉴판  -->
+		<p>
+		<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+			Link with href
+		</a>
+		<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+			Button with data-bs-target
+		</button>
+		</p>
+		<div class="collapse" id="collapseExample">
+		  <div class="card card-body">
+			Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+		  </div>
+		</div>
+		
+		
+		
+		<p>
+		  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+			Toggle width collapse
+		  </button>
+		</p>
+		<div style="min-height: 120px;">
+		  <div class="collapse collapse-horizontal" id="collapseWidthExample">
+			<div class="card card-body" style="width: 300px;">
+			  This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+			</div>
+		  </div>
+		</div>
+		
+		
+		
+		
+		<nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+		  <a class="navbar-brand" href="#">Navbar</a>
+		  <ul class="nav nav-pills">
+			<li class="nav-item">
+			  <a class="nav-link" href="#scrollspyHeading1">First</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#scrollspyHeading2">Second</a>
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+			  <ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+				<li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+			  </ul>
+			</li>
+		  </ul>
+		</nav>
+		<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+		  <h4 id="scrollspyHeading1">First heading</h4>
+		  <p>다. 특히 이 전 서장이 오후 10시20분께 현장에 도착해 상황을 지휘했다고 기록된 용산경찰서 상황보고서의 허위작성 의혹도 따져보게 될 것으로 보인다. 뿐만 아니라 소방청이 지난달 29일 밤 오후 10시18분부터 서울경찰청과 용산경찰서, 경찰청 등에 공동대응을 15차례 요청한 내역이 공개된 만큼, 경찰 내부 상황관리 시스템과 소방청의 공동대응 요청 처리가 제때 전달되지 않은 이유 등도 밝혀내야 할 부분이다.
+서울경찰청은 이날 서울치안 총책임자인 김광호 서울경찰청장의 참사 당일 구체적 동선도 공개했다. 김 청장은 29일 낮 출근해 집회 관리를 한 뒤 지하철로 퇴근해 집에 머물고 있었다. 밤 11시34분 이 전 서장 전화를 받지 못했고, 밤 11시36분께 첫 상황을 보고받은 뒤 11시44분에 서울청 경비과장에게 가용부대 급파를 처음 지시했다. 밤 11시47분께 홍보담당관에서 위기대응체계 가동을, 112 치안종합상황실과 기동본부장에게 가용경력 급파를 잇달아 지시했다. 이어 밤 11시58분 112치안종합상황실장과 교통안전과장에게 교통경찰 추가 배치를 지시했다. 자정을 넘긴 30일 0시10분엔 인접 경찰서의 형사 추가 배치를 지시했다. 김 청장이 사고현장에 도착해 현장을 지휘한 것은 0시25분이었다. 소방당국이 29일 밤 11시13분, 전국의 소방력을 동원해야 수습 가능한 상황이라는 판단에 따라 ‘대응 3단계’를 발령한 것과 비교할 때, 경찰 컨트롤타워의 총체적 부실이 거듭 확인된 것이다.</p>
+		  <h4 id="scrollspyHeading2">Second heading</h4>
+		  <p>페이스북트위터카카오링크스크랩프린트글씨 키우기
+지난 4일 북한의 중거리탄도미사일 발사에 대응하기 위해 한·미 연합 공격편대군 비행 및 정밀폭격 훈련이 실시됐다. 공군 에프(F)-15케이(K)가 합동직격탄 발사 훈련을 하고 있다. 합동참모본부 제공
+지난 4일 북한의 중거리탄도미사일 발사에 대응하기 위해 한·미 연합 공격편대군 비행 및 정밀폭격 훈련이 실시됐다. 공군 에프(F)-15케이(K)가 합동직격탄 발사 훈련을 하고 있다. 합동참모본부 제공
+지난 2일 북한의 북방한계선(NLL) 이남 단거리탄도미사일(SRBM) 발사에 군이 대응하는 과정에서 전투기가 유도 폭탄을 제때 투하하지 못한 것으로 확인됐다. 지난달 현무-2C 탄도미사일 낙탄 사고부터 연이어 문제점이 이어지면서 우려가 커지고 있다.
+4일 <한겨레> 취재를 종합하면, 지난 2일 KF-16 전투기는 북의 무력시위에 대응해 스파이스-2000 유도 폭탄 2발을 발사했다. 이 과정에서 첫 발은 정상적으로 발사했으나 나머지 1발은 표적 설정 과정에서 오류가 발견돼 발사하지 못한 채 기지로 복귀한 것으로 나타났다.
+군 관계자는 “스파이스-2000을 발사하는 데 표적 설정 과정의 오류가 있었다. 무기 체계에는 문제가 없었는데 시간상 차질이 생겼다”고 말했다.
+군은 이후 발사 목표 수치인 3발을 맞추기 위해 뒤따르던 F-15K가 원래 계획보다 1발 많은 2발의 슬램-이아르(ER)를 발사하기로 했다. 그러나 F-15K 역시 미사일을 장착하는 과정에서 문제가 발생해 1발의 미사일만 발사했다. 나머지 1발은 뒤따르던 예비기가 발사했다.</p>
+		  <h4 id="scrollspyHeading3">Third heading</h4>
+		  <p>10월 곡물가격지수는 152.3포인트로 전달(147.9포인트)과 4.4포인트 상승했다. 올 1월 140.6이던 곡물가격지수는 2월 우크라이나 전쟁 여파로 3월 170.1로 급등한 뒤, 5월 173.5까지 치솟았다. 이후 6월 166.3, 7월 147.3, 8월 145.6으로 점차 하락했다.
+
+하지만 9월 145.9로 재반등한 데 이어 10월에도 비교적 큰폭으로 올랐다. 특히 월간 상승률이 9월(1.6％)이 두배 가까이나 됐다.
+
+곡물가격이 다시 불안정해지는 것은 흑해를 둘러싼 주변국 긴장도가 주된 요인으로 꼽힌다. FAO는 흑해 곡물 수출협정의 지속성에 대한 불확실성이 커지고 미국 생산 감소 전망 등의 영향을 국제 밀 가격 상승 요인으로 지목했다.
+
+옥수수는 미국·유럽연합(EU)의 생산 감소 전망, 아르헨티나의 건조한 기후, 우크라이나의 수출 불확실성 등이 복합적으로 작용해 가격이 올랐다. 쌀 가격은 상승세를 이어갔으나, 수요 저조로 상승 폭이 크지 않았다.</p>
+		  <h4 id="scrollspyHeading4">Fourth heading</h4>
+		  <p>이번에 공개된 스토리 영상은 라마트라가 왜 인류에게 적대하고, 또 옴닉을 지키고자 하는지 설명하고 있다. 옴닉들을 전쟁으로 이끌기 위해 창조된 라마트라는 자신의 탄생 목적보다는 동족인 옴닉의 더 나은 삶만을 바랐다. 이에 평화와 조화를 이루는 방법을 탐구하고 존재론적 질문을 반복하며 인류와 공존을 꿈꿨다.
+
+라마트라는 자신의 바람에도 인류의 꿈을 위해 옴닉들이 희생당했다고 설명한다. 특히 그는 대를 잇는 것이 불가능해 한 세대만 존재하는 옴닉의 유한한 생명을 지키기 위해 자신들만의 자리를 찾는 대의를 이야기하며 인류에게 맞서는 이유를 밝혔다.</p>
+		  <h4 id="scrollspyHeading5">Fifth heading</h4>
+		  <p>◆편두통
+
+17세기 치유자들은 허브의 일종인 머위를 이용해 편두통을 치료했다. 독일과 미국 공동연구팀이 허브를 이용해 편두통 환자 58명을 치료하는 실험을 했다. 4달간 하루에 두 번 머위 75㎎ 섭취한 사람들은 위약 대비 통증이 26% 감소하는 결과를 보였다. 과학자들에 따르면 머위에는 편두통을 촉발시키는 혈관 염증을 예방하는 성분이 들어있다.
+
+ 
+
+◆가벼운 두통
+
+두통이 심하지 않은 경우에는 심상 훈련만으로도 통증을 개선하는 효과를 볼 수 있다. 심상 훈련은 머리에 특정한 이미지를 떠올리는 훈련이다. 가령 해변의 시원한 바닷가와 야자나무를 떠올리며 긴장을 완화하고 머리를 맑게 만드는 것이다.</p>
+		  
+		 
+		
+		
+		
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+		
+    
+	</body>
+
+</html>
+
+
+
+
+
