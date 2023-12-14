@@ -126,7 +126,7 @@ function Clock() {
         let deg = 0;
         setInterval(()=>{
             deg = deg - 90;
-            document.querySelector(".wrap1 > .cube").style.transform
+            document.querySelector(".cube").style.transform
             = 'rotateX(' + deg + 'deg)';
         }, 1000)
                              
