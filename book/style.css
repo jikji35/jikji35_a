@@ -30,6 +30,9 @@ body {
 
 
 
+.user>span{
+    margin-top: 600px;
+}
 
 
 /*  네비바 고정  */
@@ -65,16 +68,16 @@ a.navbar-brand{
 button.navbar-toggler{
 margin-right: 21%;
 padding-right:1.62rem ; /* 10px */
-width:1.4rem;
-height:1.4rem;
+width:1.6rem;
+height:1.6rem;
 
 }
 
 
 /* 햄버거버튼 (줄3개) */
 span.navbar-toggler-icon{
-	width:1.2rem;
-	height:1.2rem;
+	width:1.4rem;
+	height:1.4rem;
 	margin-left: -0.54rem;
 	margin-bottom: 0.19rem;
 }
@@ -210,14 +213,11 @@ body > div > nav{
 }
 
 
-
-
 /* 직지35회 황악회 글자 */
 #offcanvasDarkNavbarLabel{
     color: rgb(244, 115, 55);
-    font-size: 0.8em;
+    font-size: 1.4em;
     margin-left: 1.8rem;
-    z-index: 10;
 }
 
 
@@ -624,6 +624,16 @@ body > div > div.hero{
     }
 
 
+    /* 동영상 화면 */
+    .hero video {
+        position: absolute;
+        width: 100%;
+        /*min-width: 100%;*/
+        min-height: 30vh;
+        z-index: -1;  /*heading 텍스트문자가 동영상위로 나타나게 한다.  */
+        display: block;
+    }
+
 
 
     /* 동영상 화면 공간 */
@@ -657,19 +667,11 @@ body > div > div.hero{
     
     }
 
-     /* 동영상 화면 */
-    .hero video {
-        position: absolute;
-        width: 100%;
-        /*min-width: 100%;*/
-        min-height: 30vh;
-        z-index: -1;  /*heading 텍스트문자가 동영상위로 나타나게 한다.  */
-        display: block;
     }
 
 
 
-}
+    
 
 
 
@@ -852,7 +854,7 @@ body > div > div.hero{
     /* 직지35회 황악회 글자 */
     #offcanvasDarkNavbarLabel{
         color: rgb(244, 115, 55);
-        font-size: 0.8em;
+        font-size: 1.3em;
         margin-left: 1.5rem;
     }
 
@@ -976,6 +978,4 @@ body > div > div.hero{
     }
         
 
-
-
-    }
+        }
